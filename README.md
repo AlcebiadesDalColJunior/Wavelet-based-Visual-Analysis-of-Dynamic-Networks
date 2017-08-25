@@ -8,22 +8,19 @@ Python implementation related to the paper, plus tools. Original paper presentin
 
 ### code:
 
-- cmdWavelets.py: Command line tool to compute the wavelet coefficients, from an "edges" file and a "signal" file. Output is written by np.savetxt, nodes as rows, timeslices as columns.
 
-- thiers2012.py: Script for the thiers2012 dataset, using all configuration options and tricks (use as base for more complex situations)
-
-- util.py: Utility functions
 
 ### datasets:
-- thiers2012, from http://www.sociopatterns.org/datasets/high-school-dynamic-contact-networks/
-- simple : Synthetic test dataset for the command line tool
+
+- Contacts: http://www.sociopatterns.org/datasets/
+- IMDB: https://github.com/CreativeCodingLab/TimeArcs or http://www.imdb.com/interfaces
+- Taxi: http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml
 
 
 ### File format:
 
-- Edges: One time slice per line, edges separated by ";"  (n1,n2);(n2;n3);...;(na,nb)
-
-- Signal: Identical to the edges file, but values instead of pairs.
+- Edges: One time slice per line. Edges must be separated by ";": (n1,n2);(n2;n3);...;(na,nb)
+- Signal: Identical to the edges file, but with values instead of pairs.
 
 
 ### Acknowledgements:
