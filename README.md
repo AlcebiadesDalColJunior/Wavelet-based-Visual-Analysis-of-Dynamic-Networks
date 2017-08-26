@@ -8,19 +8,19 @@ Python implementation related to the paper, plus tools.
 
 ### code:
 
-
+- Main: handling_dynamic_network.py
 
 ### datasets:
 
 - Contacts: http://www.sociopatterns.org/datasets/
-- IMDB: https://github.com/CreativeCodingLab/TimeArcs or http://www.imdb.com/interfaces
+- IMDB: https://github.com/CreativeCodingLab/TimeArcs
 - Taxi: http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml
 
 
 ### File format:
 
+- Labels: One label per line. Labels identify nodes in edges
 - Edges: One time slice per line. Edges must be separated by ";": (n1,n2);(n2;n3);...;(na,nb)
-- Signal: Identical to the edges file, but with values instead of pairs.
 
 
 ### Acknowledgements:
