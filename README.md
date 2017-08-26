@@ -20,7 +20,7 @@ Python implementation related to the paper, plus tools.
 ### File format:
 
 - Labels: One label per line. Labels identify nodes in edges
-- Edges: One time slice per line. Edges must be separated by ";": (n1,n2);(n2;n3);...;(na,nb)
+- Edges: One time slice per line. Edges must be separated by ";": (node1,node2);(node2,node3);...;(nodea,nodeb)
 
 
 ### Acknowledgements:
