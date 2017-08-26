@@ -1,0 +1,35 @@
+<div class="gsp-chart-wrapper-right col-md-12">
+  <div class="gsp-chart-title">
+    <div>
+      <div class="col-md-3 col-sm-3 gsp-chart-title-text">Network view</div>
+      <div class="btn-group col-md-3 col-sm-3" role="group" aria-label="...">
+        <button type="button" ng-click="main.updateSignal(0)" class="btn btn-default" ng-class="{active: main.currentSignalOption == 0}"
+                ng-if="main.graphHasLoaded && main.signalHasLoaded">S</button>
+        <button type="button" ng-click="main.updateSignal(1)" class="btn btn-default" ng-class="{active: main.currentSignalOption == 1}"
+                ng-if="main.graphHasLoaded && main.classHasLoaded">C</button>
+      </div>
+      <div class="input-group pull-right col-md-4 col-sm-4">
+          <span class="input-group-addon" id="basic-addon1">time slice</span>
+        <input type="number" step="1" min="0" class="form-control" id="slice"
+               ng-model="main.coordinated.selectedTime"
+               ng-if="main.graphHasLoaded">
+      </div>
+    </div>
+
+  </div>
+  <graph-chart class="col-md-12 col-sm-12 gsp-chart"
+               coordinated="main.coordinated"
+               graph="main.graph"
+               domain="main.currentDomain"
+               color-scale="main.currentColorScale"
+               color-scale-type="main.currentColorScaleType"
+               gfun="main.currentSignal"
+               colorbar="main.graphColorBar"
+               height="main.grHeight"
+               coeffs="main.wav"
+               cvalues="main.classificationT"
+               class-color-scale="main.classColorScale"
+               current-class="main.currentClass"
+               ng-if="main.graphReady">
+  </graph-chart>
+</div>

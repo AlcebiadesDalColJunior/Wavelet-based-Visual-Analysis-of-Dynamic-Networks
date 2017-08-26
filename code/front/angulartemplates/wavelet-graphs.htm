@@ -1,0 +1,34 @@
+<div class="gsp-chart-wrapper col-md-12">
+  <div class="gsp-chart-title">
+    <div class="row">
+      <div class="col-md-2">Wav</div>
+      <div class="input-group pull-right col-md-4">
+        <span class="input-group-addon" id="basic-addon1">slice</span>
+        <input type="number" step="1" min="0" class="form-control" id="slice"
+               ng-model="main.coordinated.selectedTime"
+               ng-if="main.graphHasLoaded  && main.wavHasLoaded">
+      </div>
+    </div>
+
+  </div>
+  <div ng-repeat="n in main.rangeScales" ng-if="main.graphReady && main.wavHasLoaded">
+    <graph-chart class="col-md-2 gsp-chart"
+                 coordinated="main.coordinated"
+                 graph="main.graph"
+                 domain="main.wavDomain"
+                 color-scale="main.wavColorScale"
+                 gfun="main.wavCurrent[n]"
+                 height="300"
+                 ng-if="main.graphReady && main.wavHasLoaded">
+    </graph-chart>
+  </div>
+  <graph-chart class="col-md-2 gsp-chart"
+               coordinated="main.coordinated"
+               graph="main.graph"
+               domain="main.currentDomain"
+               color-scale="main.currentColorScale"
+               gfun="main.currentSignal"
+               height="300"
+               ng-if="main.graphReady && main.wavHasLoaded">
+  </graph-chart>
+</div>

@@ -1,0 +1,27 @@
+<div class="gsp-chart-wrapper col-md-12">
+  <div class="col-sm-2  col-md-2 col-lg-1 padding-0">
+    <div ng-repeat="n in [4,3,2,1,0]">
+      <bar-chart class="gsp-chart col-md-12 col-sm-12 padding-0"
+                 bars-color="main.classColorScale"
+                 bars-heights="main.statesProp[n]"
+                 height="55"
+                 ng-if="main.statesHasLoaded">
+      </bar-chart>
+    </div>
+  </div>
+
+  <div class="col-sm-10 col-md-10 col-lg-11  padding-0">
+    <states-chart class="col-sm-12 col-md-12 col-lg-12 gsp-chart"
+                  yvalues="main.states"
+                  xvalues="main.timeLabels"
+                  xvaluesDet="main.timeLabelsDet"
+                  color-scale="main.statesColorScale"
+                  domain="main.classDomain"
+                  cvalues="main.states"
+                  height="250"
+                  coordinated="main.coordinated"
+                  states-props="main.statesProp"
+                  ng-if="main.statesHasLoaded">
+    </states-chart>
+  </div>
+</div>

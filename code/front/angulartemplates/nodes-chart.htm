@@ -1,0 +1,24 @@
+<div class="gsp-chart-wrapper col-md-12 col-sm-12">
+    <div class="gsp-chart-title-small">
+        <div class="row">
+            <div class="col-md-4 col-sm-4">Node ranking</div>
+        </div>
+    </div>
+
+    <div  style="height: 185px; overflow-y: scroll; overflow-x: hidden">
+    <nodes-chart class="gsp-chart col-md-12 col-sm-12"
+                    xvalues="main.timeLabels"
+                    yvalues="main.functionY"
+                    color-scale="main.classColorScale"
+                    domain="main.classDomain"
+                    cvalues="main.classificationT"
+                    nodes="main.graph.nodes"
+                    node-height="20"
+                    height="main.nrHeight"
+                    coordinated="main.coordinated"
+                    order="main.nodesOrder"
+                    ng-if="main.graphHasLoaded">
+    </nodes-chart>
+    </div>
+
+</div>

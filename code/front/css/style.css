@@ -1,0 +1,399 @@
+body{
+    font-family: 'PT Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    overflow: hidden;
+    background-color: #F2F2F2;
+}
+
+hr.separator {
+    margin: 0px 0 12px 0;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(122, 122, 122, 0.75), rgba(0, 0, 0, 0));
+}
+
+#loader{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 300px;
+    left: 50%;
+    margin-left: -50px;
+
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #6e6e6e;
+
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.navbar{
+    margin-bottom: 5px;
+}
+
+.navbar-dyn{
+    background-color: #555;
+    border-color: #e7e7e7;
+}
+
+.navbar-brand{
+    font-family: 'PT Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    color: #ffffff;
+}
+.navbar-brand:hover{
+    color: #ced2d2;
+}
+
+.navbar-nav > li > a, .navbar-brand {
+    padding-top:10px !important; padding-bottom:0 !important;
+    height: 28px;
+}
+.navbar {min-height:28px !important;}
+
+.form-control{
+    height: 25px;
+    font-size: 9pt;
+    padding: 4px;
+}
+
+.input-group {
+    font-size: 9pt;
+}
+
+.input-group-addon{
+    padding: 1px 8px 1px;
+}
+
+.btn-default{
+    padding: 2px 8px 2px;
+}
+.padding-sm{
+    padding: 2px !important;
+}
+.padding-en{
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+.padding-0{
+    padding: 0px !important;
+    font-size: 0;
+    padding-bottom: 2px !important;
+}
+.no-fill{
+    fill: none;
+}
+
+.gsp-chart{
+    fill: #fff;
+    padding: 0px;
+    background-color: #fff;
+}
+.vis-overflow {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.chart{
+    font-size: 10pt;
+}
+.brush .extent {
+    fill: #aaa;
+    fill-opacity: .4;
+    shape-rendering: crispEdges;
+}
+
+.gsp-chart-wrapper{
+    background-color: #fff;
+
+    position: relative;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    padding: 3px;
+    display: inline-block;
+    margin-bottom: 15px;
+
+}
+
+.gsp-chart-wrapper-right{
+    background-color: #fff;
+
+    position: relative;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    padding: 3px;
+    display: inline-block;
+
+}
+
+.gsp-chart-wrapper-top{
+    background-color: #fff;
+
+    position: relative;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #aaa;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: #aaa;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: #aaa;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #ddd;
+    border-bottom: 0px;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    padding: 3px 3px 0px 3px;
+    display: inline-block;
+}
+.gsp-chart-wrapper-bottom{
+    position: relative;
+    border: 1px solid #aaa;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    margin-bottom: 15px;
+    padding: 3px 3px 3px 0;
+    display: inline-block;
+
+}
+
+.gsp-chart-title {
+    border-bottom: 1px solid #777;
+    color: #777;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 0px 8px 0px;
+    margin-bottom: 2px;
+    margin-right: 4px;
+    height: 30px;
+}
+
+.gsp-chart-title-text {
+   padding: 2px;
+}
+
+.gsp-chart-title-small {
+    border-bottom: 1px solid #777;
+    color: #777;
+    font-size: 12px;
+    font-weight: 150;
+    padding: 0px 10px 0px;
+    margin-bottom: 2px;
+    margin-right: 4px;
+}
+
+.gsp-chart-space {
+    margin-bottom: 10px;
+}
+
+.vis-graph-light{
+    fill: #fff;
+    color: #222;
+}
+.vis-graph-white{
+    fill: #fff;
+    color: #171717;
+}
+.vis-node{
+    opacity:0.9;
+    stroke: #333;
+}
+.vis-node:hover{
+    opacity:0.95;
+    stroke: #333;
+    stroke-width: 2px;
+}
+
+.vis-node.selected{
+    stroke: #00a0ea;
+    stroke-width: 2px;
+}
+
+.vis-node.transparent{
+    opacity: .5;
+}
+
+.vis-link{
+    stroke: #333;
+    stroke-width: 1;
+    stroke-opacity:0.9;
+}
+.vis-link.highlighted{
+    stroke: #218cac;
+    stroke-width: 2.5;
+    stroke-opacity:1;
+}
+.vis-link.transparent{
+    opacity: .35;
+}
+.vis-line{
+    stroke: #999;
+    stroke-width: 1;
+    stroke-opacity:1;
+    fill: none;
+}
+
+.vis-line-h2{
+    stroke: #ccc;
+    stroke-width: 2.2;
+    stroke-opacity: 1;
+    fill: none;
+}
+
+.vis-axis{
+    stroke: #666;
+    stroke-width: .4;
+    fill: none;
+}
+
+.vis-axis text{
+    fill: #666;
+}
+
+.vis-time-line{
+    stroke-width: 2;
+    stroke: #999;
+    stroke-dasharray: 5,5;
+    opacity: .8;
+}
+
+.vis-axis text {
+    font: 10px sans-serif;
+}
+
+.vis-marks{
+    fill: #fff;
+    stroke: #333;
+    stroke-opacity: .8;
+    stroke-width: 1px;
+    opacity: .9;
+    z-index: 1;
+}
+
+.vis-marks:hover{
+    fill: #fff;
+    stroke: #333;
+    stroke-width: 3px;
+    opacity: 1;
+    z-index: 2;
+}
+
+.vis-layer{
+    stroke: #333;
+    stroke-width: 0.5;
+}
+
+.vis-bar{
+   stroke: #bbb;
+   stroke-width: 1;
+    fill: red;
+}
+
+.debug-text{
+    fill: #ff777d;
+    font-size: 10px;
+}
+
+.colorbar .axis text{
+    fill: #333;
+    font-size: 7pt;
+    stroke-width: 0.5;
+}
+.colorbar .axis line{
+    fill: none;
+    stroke: #333;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+.colorbar .axis .domain{
+    fill: none;
+    stroke: #333;
+    stroke-width: 1.05;
+    shape-rendering: crispEdges;
+}
+
+.node-axis-label{
+    stroke-width: 0;
+}
+
+#tooltip {
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 5px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 10;
+    visibility: hidden;
+    pointer-events: none;
+}
+#tooltip .axis{
+    stroke: #fff;
+    stroke-width: 2;
+}
+
+#wavcoeff {
+    color: white;
+    background: white;
+    padding: 5px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+}
+
+#wavcoeff .axis{
+    stroke: #ccc;
+    stroke-width: 2;
+}
+
+.d3-tip {
+    line-height: 1;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid lightgrey;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    content: "\25BC";
+    position: absolute;
+    text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0;
+}
+
+.percents{
+    font-size: 9pt;
+    fill: #333;
+}

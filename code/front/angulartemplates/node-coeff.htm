@@ -1,0 +1,14 @@
+<div class="gsp-chart-wrapper col-sm-12 col-md-12" ng-if="main.isNodeSelected">
+  <div class="gsp-chart-title-small">
+    <div class="row">
+      <div class="col-md-12">WC </div>
+    </div>
+
+  </div>
+  <bar-chart class="gsp-chart col-md-12 col-sm-12"
+             bars-color="main.selectedCoeffColor"
+             bars-heights="main.selectedCoeff"
+             height="110"
+             ng-if="main.isNodeSelected">
+  </bar-chart>
+</div>

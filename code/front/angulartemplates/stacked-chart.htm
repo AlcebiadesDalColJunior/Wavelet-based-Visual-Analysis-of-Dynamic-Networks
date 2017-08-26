@@ -1,0 +1,36 @@
+<div class="gsp-chart-wrapper col-md-12">
+  <div class="gsp-chart-title">
+    <div>
+      <div class="col-md-3 col-sm-3 gsp-chart-title-text">Classification</div>
+      <div class="input-group pull-right col-md-2 col-sm-2">
+        <span class="input-group-addon" id="basic-addon1">slice</span>
+        <input type="number" step="1" min="0" class="form-control" id="slice"
+               ng-model="main.coordinated.selectedTime"
+               ng-if="main.graphHasLoaded && main.signalHasLoaded">
+      </div>
+    </div>
+
+  </div>
+  <div class="col-sm-1  col-md-1 col-lg-1 padding-0">
+    <div ng-repeat="n in main.rangeClasses">
+      <bar-chart class="gsp-chart col-md-12 col-sm-12 padding-0"
+                 bars-color="main.classColorScale[n]"
+                 bars-heights="main.wavMeans[n]"
+                 height="40"
+                 title="main.wavPercents[n] + ' %'"
+                 ng-if="main.wavMeanHasLoaded && main.classHasLoaded">
+      </bar-chart>
+    </div>
+  </div>
+  <div class="col-sm-110 col-md-11 col-lg-11  padding-0">
+    <area-chart class="col-sm-12 col-md-12 col-lg-12 gsp-chart"
+                color-scale="main.classColorScale"
+                domain="main.classDomain"
+                height="main.areaHeight"
+                data="main.sclass"
+                active-classes="main.checkClass"
+                selected-time="main.coordinated.selectedTime"
+                ng-if="main.classHasLoaded && main.wavMeanHasLoaded">
+    </area-chart>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="gsp-chart-wrapper col-md-12">
+  <div class="gsp-chart-title-small">
+    <div class="row">
+      <div class="col-md-4">Wav mean</div>
+    </div>
+
+  </div>
+  <div ng-repeat="n in main.rangeClasses">
+    <div class="col-md-2">
+      <div class="checkbox">
+        <label><input type='checkbox' ng-model="main.checkClass[n]">  Class {{n}}: <span ng-if="main.wavMeanHasSizes"> ({{main.wavMeans.percents[n]}} %)</span></label>
+      </div>
+      <bar-chart class="gsp-chart col-md-12 padding-sm"
+                 bars-color="main.classColorScale[n]"
+                 bars-heights="main.wavMeans[n]"
+                 height="80"
+                 ng-if="main.wavMeanHasLoaded && main.classHasLoaded">
+      </bar-chart>
+    </div>
+  </div>
+
+</div>

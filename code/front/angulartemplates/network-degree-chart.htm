@@ -1,0 +1,32 @@
+<div class="gsp-chart-wrapper col-md-12 col-sm-12">
+    <div class="gsp-chart-title-small">
+        <div class="row">
+            <div class="col-md-4 col-sm-4">Network analyzer</div>
+        </div>
+
+    </div>
+
+    <time-context-chart class="gsp-chart col-md-12 col-sm-12"
+                        height="main.tcHeight"
+                        yvalues="main.networkDegree"
+                        xvalues="main.timeLabels"
+                        coordinated="main.coordinated"
+                        ng-if="main.statesHasLoaded">
+    </time-context-chart>
+    <div class="col-md-12">
+        <hr class="separator">
+    </div>
+    <states-chart class="col-sm-12 col-md-12 col-lg-12 gsp-chart"
+                  yvalues="main.networkDegree"
+                  xvalues="main.timeLabels"
+                  tool-tips="main.toolTips"
+                  color-scale="main.statesColorScale"
+                  domain="main.statesDomain"
+                  cvalues="main.states"
+                  height="main.naHeight"
+                  coordinated="main.coordinated"
+                  states-props="main.statesProp"
+                  ng-if="main.statesHasLoaded">
+    </states-chart>
+
+</div>

@@ -1,0 +1,21 @@
+<div class="gsp-chart-wrapper col-md-12 col-sm-12" ng-if="main.isNodeSelected">
+  <div class="gsp-chart-title-small">
+    <div class="row">
+      <div class="col-md-4 col-sm-4">Time series (current value: {{main.functionY[main.coordinated.selectedTime] | number:2}})</div>
+    </div>
+
+  </div>
+
+  <function-chart class="gsp-chart col-md-12 col-sm-12"
+                  xvalues="main.timeLabels"
+                  tool-tips="main.toolTips"
+                  yvalues="main.functionY"
+                  color-scale="main.classColorScale"
+                  domain="main.classDomain"
+                  cvalues="main.functionC"
+                  height="main.tsHeight"
+                  coordinated="main.coordinated"
+                  ng-if="main.graphReady">
+  </function-chart>
+
+</div>

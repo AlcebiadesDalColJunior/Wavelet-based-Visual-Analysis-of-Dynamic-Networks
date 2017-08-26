@@ -1,0 +1,34 @@
+[
+{
+"name": "hospital",
+"dir": "results/hospital/"
+},
+{
+"name": "imdb1",
+"dir": "results/imdb1/"
+},
+{
+"name": "manh-2009-12",
+"dir": "results/manh-2009-12/"
+},
+{
+"name": "primary_school",
+"dir": "results/primary_school/"
+},
+{
+"name": "synthetic",
+"dir": "results/synthetic/"
+},
+{
+"name": "thiers_2011",
+"dir": "results/thiers_2011/"
+},
+{
+"name": "thiers_2012",
+"dir": "results/thiers_2012/"
+},
+{
+"name": "thiers_2013",
+"dir": "results/thiers_2013/"
+}
+]

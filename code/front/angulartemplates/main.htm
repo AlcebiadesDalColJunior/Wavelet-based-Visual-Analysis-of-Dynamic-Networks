@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <div class="gsp-main" ng-controller="dynwav.vis.controller as main">
+    <div class="row" ng-if="main.graphReady">
+      <div class="col-md-7 col-lg-8 padding-sm">
+        <div ng-include="'angulartemplates/network-degree-chart.htm'"></div>
+        <div ng-include="'angulartemplates/nodes-chart.htm'"></div>
+        <div ng-include="'angulartemplates/function-chart.htm'"></div>
+      </div>
+
+      <div class="col-md-5 col-lg-4 padding-sm">
+        <div ng-include="'angulartemplates/graph-chart.htm'"></div>
+      </div>
+    </div>
+    <div id="loader" ng-if="main.loading">  </div>
+
+  </div>
+
+</div>
