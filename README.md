@@ -6,11 +6,11 @@ Alcebiades Dal Col, Paola Valdivia, Fabiano Petronetto, Fabio Dias, Claudio T. S
 Python implementation related to the paper, plus tools.
 
 
-### code:
+### Code:
 
 - Main: handling_dynamic_network.py
 
-### datasets:
+### Datasets:
 
 - Contacts: http://www.sociopatterns.org/datasets/
 - IMDB: https://github.com/CreativeCodingLab/TimeArcs
@@ -22,9 +22,6 @@ Python implementation related to the paper, plus tools.
 - Labels: One label per line. Labels identify nodes in edges
 - Edges: One time slice per line. Edges must be separated by ";": (node1,node2);(node2,node3);...;(nodea,nodeb)
 
-### Interface:
-
-- http://www.lcad.icmc.usp.br/~alcebiades/DynamicGraphVis/
 
 ### Acknowledgements:
 
